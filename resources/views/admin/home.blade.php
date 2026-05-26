@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="row">
-    <!-- Box Clients -->
+    
     <div class="col-lg-3 col-6">
         <div class="small-box bg-info">
             <div class="inner">
@@ -18,7 +18,7 @@
             <div class="icon">
                 <i class="fas fa-users"></i>
             </div>
-            @if(auth()->user()->hasAnyRole(['Admin', 'Manager','Vendeur']))
+            @if(auth()->user()->hasAnyRole(['admin', 'Manager','Vendeur']))
                 <a href="{{ route('clients.index') }}" class="small-box-footer">
                     Plus d'infos <i class="fas fa-arrow-circle-right"></i>
                 </a>
@@ -40,7 +40,7 @@
             <div class="icon">
                 <i class="fas fa-box"></i>
             </div>
-            @if(auth()->user()->hasAnyRole(['Admin', 'Manager']))
+            @if(auth()->user()->hasAnyRole(['admin', 'Manager']))
                 <a href="{{ route('produits.index') }}" class="small-box-footer">
                     Plus d'infos <i class="fas fa-arrow-circle-right"></i>
                 </a>
@@ -62,7 +62,7 @@
             <div class="icon">
                 <i class="fas fa-shopping-cart"></i>
             </div>
-            @if(auth()->user()->hasAnyRole(['Admin', 'Manager', 'Vendeur']))
+            @if(auth()->user()->hasAnyRole(['admin', 'Manager', 'Vendeur']))
                 <a href="{{ route('ventes.index') }}" class="small-box-footer">
                     Plus d'infos <i class="fas fa-arrow-circle-right"></i>
                 </a>
@@ -84,7 +84,7 @@
             <div class="icon">
                 <i class="fas fa-truck-loading"></i>
             </div>
-            @if(auth()->user()->hasAnyRole(['Admin', 'Manager', 'Magasinier']))
+            @if(auth()->user()->hasAnyRole(['admin', 'Manager', 'Magasinier']))
                 <a href="{{ route('achats.index') }}" class="small-box-footer">
                     Plus d'infos <i class="fas fa-arrow-circle-right"></i>
                 </a>
@@ -97,12 +97,12 @@
     </div>
 </div>
 <div class="row">
-    <!-- Vos widgets existants ici... -->
+   
 </div>
 
-<!-- Section Motivation Statique -->
+
 <div class="row mt-3">
-    <!-- Carte Citation Motivante -->
+    
     <div class="col-md-6">
         <div class="card bg-gradient-info">
             <div class="card-body text-center">
@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <!-- Carte Progression Personnelle -->
+    
     <div class="col-md-6">
         <div class="card card-success">
             <div class="card-header">
@@ -142,7 +142,7 @@
     </div>
 </div>
 
-<!-- Section Badges -->
+
 <div class="row mt-3">
     <div class="col-12">
         <div class="card card-primary">
@@ -192,7 +192,7 @@
 
 @section('js')
 <script>
-// Fonction pour changer la citation (statique)
+// Fonction pour changer la citation 
 function changeQuote() {
     const quotes = [
         {

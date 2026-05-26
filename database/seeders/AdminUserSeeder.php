@@ -11,19 +11,19 @@ class AdminUserSeeder extends Seeder
 {
     public function run(): void
     {
-        // Créer le rôle admin s’il n'existe pas
+       
         $role = Role::firstOrCreate(['name' => 'admin']);
 
-        // Créer l'utilisateur admin
+        
         $admin = User::firstOrCreate(
             ['email' => 'admin@gmail.com'],
             [
                 'name' => 'Admin',
-                'password' => Hash::make('admin'), // change le mot de passe plus tard !
+                'password' => Hash::make('admin'), 
             ]
         );
 
-        // Assigner le rôle
+        
         $admin->assignRole($role);
     }
 }
